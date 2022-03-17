@@ -3,7 +3,7 @@
 
 <head>
   
-  <title>Obstacle 001 | Fiona Su</title>
+  <title>建站问题记录（20220317——20220320） | Fiona Su</title>
   <meta name="google-site-verification" content="" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +52,7 @@
     Mar 17, 2022
   </time>
 </h3>
-  <h1>Obstacle 001</h1>
+  <h1>建站问题记录（20220317——20220320）</h1>
   <p class="post-info">
   
   
@@ -61,10 +61,19 @@
   
 </p>
   
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/janfiona/janfiona.github.io.git/tags/Debug/" rel="tag">Debug</a></li></ul>
+
   
   <article>
-    <h2 id="Hexo-d成功部署到GitHub之后，GitHub-Pages没有更新文章"><a href="#Hexo-d成功部署到GitHub之后，GitHub-Pages没有更新文章" class="headerlink" title="Hexo d成功部署到GitHub之后，GitHub Pages没有更新文章"></a>Hexo d成功部署到GitHub之后，GitHub Pages没有更新文章</h2><p>从知乎上看到的，把_config.yml文件做更改，然后hexo g、s、d</p>
+    <p>再次走在搭建个站的路上，记录遇到的问题以及解决办法</p>
+<h2 id="Hexo-d无法部署到GitHub"><a href="#Hexo-d无法部署到GitHub" class="headerlink" title="Hexo d无法部署到GitHub**"></a>Hexo d无法部署到GitHub**</h2><p>删除了原来的blog文件夹，重新建立了blog文件夹</p>
+<p>问题在于hexo默认的branch是master，但GitHub把default的branch改成main字样了，导致无法正常deploy</p>
+<p>我在网上查了一下解决这个问题的方法：git config –global init.defaultBranch main</p>
+<p>强行设置branch为main，然后hexo g、s、d，就成功了（但git在运行的时候依然提示master，不用担心，会成功）</p>
+<p>以上操作是永久性的，之后deploy都是在main下进行</p>
+<h2 id="Hexo-d成功部署到GitHub之后，GitHub-Pages没有更新文章"><a href="#Hexo-d成功部署到GitHub之后，GitHub-Pages没有更新文章" class="headerlink" title="Hexo d成功部署到GitHub之后，GitHub Pages没有更新文章"></a>Hexo d成功部署到GitHub之后，GitHub Pages没有更新文章</h2><p>从知乎上看到的，把_config.yml文件做更改，然后hexo g、s、d</p>
 <p>更改_config.yml文件的时候：在有#的后面添加内容——只是添加注释，不会对文件作出属性的更改</p>
+<p><strong>以上这个办法时灵时不灵，我一般用hexo s查看预览，解决立马看到成品的需求；等做了很多修改之后，再尝试deploy，一般GitHub Pages会同步内容</strong></p>
 
   </article>
   
